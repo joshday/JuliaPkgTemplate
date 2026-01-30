@@ -1,4 +1,4 @@
-module {{PACKAGE_NAME}}
+module JuliaPkgTemplate
 
 # Write your package code here
 

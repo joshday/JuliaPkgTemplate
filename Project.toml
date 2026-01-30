@@ -1,5 +1,5 @@
-name = "{{PACKAGE_NAME}}"
-uuid = "{{UUID}}"
+name = "JuliaPkgTemplate"
+uuid = "7adf5606-a580-4ec5-b7a7-75603f58a1cf"
 authors = ["Josh Day <emailjoshday@gmail.com>"]
 version = "0.1.0"
 

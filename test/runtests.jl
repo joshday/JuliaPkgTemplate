@@ -1,6 +1,6 @@
-using {{PACKAGE_NAME}}
+using JuliaPkgTemplate
 using Test
 
-@testset "{{PACKAGE_NAME}}.jl" begin
+@testset "JuliaPkgTemplate.jl" begin
     @test true
 end
