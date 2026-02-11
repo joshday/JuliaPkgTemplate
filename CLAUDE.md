@@ -13,6 +13,7 @@
 
 - 4-space indentation
 - Docstrings on all exports
+- Use `### Examples` for inline docs examples
 
 # Releases
 

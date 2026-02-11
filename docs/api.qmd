@@ -1,3 +1,52 @@
-# Exported API {.unnumbered}
+---
+title: "API"
+engine: julia
+---
 
-*TODO: Document exported functions and types here.*
+```{julia}
+#| echo: false
+#| output: false
+using JuliaPackageTemplate
+```
+
+```{julia}
+#| echo: false
+#| output: asis
+export_names = filter(!=(:JuliaPackageTemplate), names(JuliaPackageTemplate))
+
+println("""
+<button class="btn btn-sm btn-outline-secondary mb-3" onclick="
+  var callouts = document.querySelectorAll('.callout.callout-note');
+  var allOpen = Array.from(callouts).every(function(c) { return !c.classList.contains('callout-collapse') || c.querySelector('.callout-collapse .collapse.show'); });
+  callouts.forEach(function(c) {
+    var collapse = c.querySelector('.callout-collapse .collapse');
+    if (!collapse) return;
+    var bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapse, {toggle: false});
+    allOpen ? bsCollapse.hide() : bsCollapse.show();
+  });
+  this.textContent = allOpen ? 'Expand All' : 'Collapse All';
+">Expand All</button>
+""")
+
+# Table of contents
+for name in export_names
+    binding = getfield(JuliaPackageTemplate, name)
+    kind = binding isa Type ? "type" : binding isa Function ? "function" : "constant"
+    println("- [`$name`](#$(lowercase(string(name)))) *($(kind))*")
+end
+println()
+
+# Detailed sections
+for name in export_names
+    binding = getfield(JuliaPackageTemplate, name)
+    kind = binding isa Type ? "type" : binding isa Function ? "function" : "constant"
+    doc = string(Docs.doc(binding))
+    println("""
+    ::: {.callout-note collapse="true" appearance="minimal"}
+    ## `$name` [*($(kind))*]{.text-muted}
+
+    $doc
+    :::
+    """)
+end
+```

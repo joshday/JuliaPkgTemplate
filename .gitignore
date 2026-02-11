@@ -1,6 +1,7 @@
 *.jl.cov
 *.jl.*.cov
 *.jl.mem
+coverage/
 Manifest.toml
 docs/Manifest.toml
 docs/build/
@@ -8,7 +9,9 @@ docs/_site
 *.claude
 *.ipynb
 *.quarto
+docs/site_libs
 docs/.quarto/
 docs/*_files/
 docs/coverage/
 **/*.quarto_ipynb
+*.html

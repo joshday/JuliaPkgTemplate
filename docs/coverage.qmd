@@ -7,8 +7,9 @@ engine: julia
 #| echo: false
 #| output: false
 using LocalCoverage
-coverage = generate_coverage(; run_test=true)
+coverage = generate_coverage("JuliaPackageTemplate"; run_test=true)
 html_coverage(coverage; dir=joinpath(@__DIR__, "_site", "coverage"), open=false)
+rm(joinpath(dirname(@__DIR__), "coverage"); recursive=true, force=true)
 ```
 
 <iframe src="coverage/index.html" width="100%" height="800px" style="border:none;"></iframe>

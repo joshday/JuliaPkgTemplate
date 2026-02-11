@@ -1,8 +1,7 @@
 ---
+title: "JuliaPackageTemplate.jl"
 engine: julia
 ---
-
-# JuliaPackageTemplate.jl {.unnumbered}
 
 Welcome to the documentation for **JuliaPackageTemplate.jl**.
 
