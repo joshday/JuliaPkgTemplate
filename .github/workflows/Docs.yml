@@ -29,15 +29,16 @@ jobs:
 
       - uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Install dependencies
-        run: julia --project=docs -e 'using Pkg; Pkg.develop(path="."); Pkg.add(["QuartoNotebookRunner", "IJulia"]); Pkg.instantiate()'
-
-      - name: Render docs
-        run: quarto render docs
-
-      - uses: actions/upload-pages-artifact@v3
+      - uses: quarto-dev/quarto-actions/render@v2
         with:
-          path: docs/_site
+          path: docs
+
+      # - name: Render docs
+      #   run: quarto render docs
+
+      # - uses: actions/upload-pages-artifact@v3
+      #   with:
+      #     path: docs/_site
 
   deploy:
     needs: build
