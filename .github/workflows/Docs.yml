@@ -28,6 +28,17 @@ jobs:
       - uses: quarto-dev/quarto-actions/render@v2
         with:
           path: docs
+      - name: Install lcov
+        run: sudo apt-get install -y lcov
+      - name: Generate coverage report
+        run: |
+          julia --project -e '
+            using Pkg
+            Pkg.add("LocalCoverage")
+            using LocalCoverage
+            coverage = generate_coverage(; run_test=true)
+            html_coverage(coverage; dir="docs/_site/coverage", open=false)
+          '
       - uses: actions/upload-pages-artifact@v4
         with:
           path: docs/_site
