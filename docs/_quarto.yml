@@ -9,6 +9,10 @@ book:
       - text: "Home"
         href: index.qmd
     right:
+      - text: "Changelog"
+        href: https://github.com/RallypointOne/JuliaPackageTemplate.jl/blob/main/CHANGELOG.md
+      - text: "Coverage"
+        href: coverage/
       - icon: github
         href: https://github.com/RallypointOne/JuliaPackageTemplate.jl
   chapters:
