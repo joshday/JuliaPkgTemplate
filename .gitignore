@@ -10,4 +10,5 @@ docs/_site
 *.quarto
 docs/.quarto/
 docs/*_files/
+docs/coverage/
 **/*.quarto_ipynb

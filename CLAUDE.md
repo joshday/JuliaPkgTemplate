@@ -1,3 +1,7 @@
+# Package Setup
+
+- Change all references to `JuliaPackageTemplate` to the name set by the user
+
 # Development
 
 - Run tests: `julia --project -e 'using Pkg; Pkg.test()'`

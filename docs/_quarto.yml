@@ -2,6 +2,10 @@ project:
   type: book
   output-dir: _site
 
+engine: julia
+julia:
+  project: "."
+
 book:
   title: "JuliaPackageTemplate.jl"
   navbar:
@@ -9,6 +13,9 @@ book:
       - text: "Home"
         href: index.qmd
     right:
+      - icon: star
+        href: https://github.com/RallypointOne/JuliaPackageTemplate.jl/stargazers
+        text: "Star"
       - icon: github
         href: https://github.com/RallypointOne/JuliaPackageTemplate.jl
   chapters:
