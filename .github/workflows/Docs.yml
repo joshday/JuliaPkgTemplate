@@ -29,23 +29,9 @@ jobs:
 
       - uses: quarto-dev/quarto-actions/setup@v2
 
-      - uses: quarto-dev/quarto-actions/render@v2
+      - uses: quarto-dev/quarto-actions/publish@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           path: docs
-
-      # - name: Render docs
-      #   run: quarto render docs
-
-      # - uses: actions/upload-pages-artifact@v3
-      #   with:
-      #     path: docs/_site
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          target: gh-pages

@@ -6,3 +6,5 @@ docs/Manifest.toml
 docs/build/
 docs/_site
 *.claude
+*.ipynb
+*.quarto
