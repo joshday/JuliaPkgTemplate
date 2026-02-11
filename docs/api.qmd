@@ -15,17 +15,19 @@ using JuliaPackageTemplate
 export_names = filter(!=(:JuliaPackageTemplate), names(JuliaPackageTemplate))
 
 println("""
-<button class="btn btn-sm btn-outline-secondary mb-3" onclick="
-  var callouts = document.querySelectorAll('.callout.callout-note');
-  var allOpen = Array.from(callouts).every(function(c) { return !c.classList.contains('callout-collapse') || c.querySelector('.callout-collapse .collapse.show'); });
-  callouts.forEach(function(c) {
-    var collapse = c.querySelector('.callout-collapse .collapse');
-    if (!collapse) return;
-    var bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapse, {toggle: false});
+<button class="btn btn-sm btn-outline-secondary mb-3" id="toggle-all-callouts">Expand All</button>
+<script>
+document.getElementById('toggle-all-callouts').addEventListener('click', function() {
+  var btn = this;
+  var bodies = document.querySelectorAll('.callout-collapse.collapse');
+  var allOpen = Array.from(bodies).every(function(el) { return el.classList.contains('show'); });
+  bodies.forEach(function(el) {
+    var bsCollapse = bootstrap.Collapse.getOrCreateInstance(el, {toggle: false});
     allOpen ? bsCollapse.hide() : bsCollapse.show();
   });
-  this.textContent = allOpen ? 'Expand All' : 'Collapse All';
-">Expand All</button>
+  btn.textContent = allOpen ? 'Expand All' : 'Collapse All';
+});
+</script>
 """)
 
 # Table of contents

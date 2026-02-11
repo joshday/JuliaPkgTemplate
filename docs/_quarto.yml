@@ -9,9 +9,6 @@ julia:
 book:
   title: "JuliaPackageTemplate.jl"
   navbar:
-    left:
-      - text: "Home"
-        href: index.qmd
     right:
       - icon: star
         href: https://github.com/RallypointOne/JuliaPackageTemplate.jl/stargazers
@@ -19,8 +16,10 @@ book:
       - icon: github
         href: https://github.com/RallypointOne/JuliaPackageTemplate.jl
   chapters:
-    - index.qmd
-    - getting-started.qmd
+    - part: "Docs"
+      chapters:
+        - index.qmd
+        - getting-started.qmd
     - part: "Reference"
       chapters:
         - api.qmd
