@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "JuliaPackageTemplate.jl",
     "section": "",
-    "text": "Installation\nWelcome to the documentation for JuliaPackageTemplate.jl.",
+    "text": "Overview\nWelcome to the documentation for JuliaPackageTemplate.jl.\nJuliaPackageTemplate.jl is a Julia package that …",
     "crumbs": [
       "Docs",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>JuliaPackageTemplate.jl</span>"
@@ -14,19 +14,8 @@
     "objectID": "index.html#installation",
     "href": "index.html#installation",
     "title": "JuliaPackageTemplate.jl",
-    "section": "",
-    "text": "using Pkg\nPkg.add(\"JuliaPackageTemplate\")",
-    "crumbs": [
-      "Docs",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>JuliaPackageTemplate.jl</span>"
-    ]
-  },
-  {
-    "objectID": "index.html#overview",
-    "href": "index.html#overview",
-    "title": "JuliaPackageTemplate.jl",
-    "section": "Overview",
-    "text": "Overview\nJuliaPackageTemplate.jl is a Julia package that …",
+    "section": "Installation",
+    "text": "Installation\nusing Pkg\nPkg.add(\"JuliaPackageTemplate\")",
     "crumbs": [
       "Docs",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>JuliaPackageTemplate.jl</span>"
