@@ -6,6 +6,7 @@
 
 - Run tests: `julia --project -e 'using Pkg; Pkg.test()'`
 - Build docs: `quarto render docs`
+- Each .qmd file in the docs should have `engine: julia` in the header
 - Never edit Project.toml or Manifest.toml manually — use Pkg
 - Only use top-level .gitignore file
 
